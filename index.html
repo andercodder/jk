@@ -1,0 +1,393 @@
+<!-- DOCTYPE -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example Template</title>
+    <meta charset="utf-8">
+    <!-- Viewport Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+      <style>
+              .navbar{
+                font-size: 22px;
+              }
+
+              /*style for timeline*/
+
+              *,
+*::before,
+*::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font: normal 16px/1.5 "Helvetica Neue", sans-serif;
+background: #456990;
+color: #fff;
+overflow-x: hidden;
+padding-bottom: 50px;
+}  /* INTRO SECTION
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.intro {
+background: #343A40;
+padding: 100px 0;
+}
+
+.container {
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+text-align: center;
+}
+
+h1 {
+font-size: 2.5rem;
+}
+
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul {
+background: #343A40;
+padding: 50px 0;
+}
+
+.timeline ul li {
+list-style-type: none;
+position: relative;
+width: 6px;
+margin: 0 auto;
+padding-top: 50px;
+background: #fff;
+}
+
+.timeline ul li::after {
+content: '';
+position: absolute;
+left: 50%;
+bottom: 0;
+transform: translateX(-50%);
+width: 30px;
+height: 30px;
+border-radius: 50%;
+background: inherit;
+}
+
+.timeline ul li div {
+position: relative;
+bottom: 0;
+width: 400px;
+padding: 15px;
+background: #CCCCCC;
+}
+
+.timeline ul li div::before {
+content: '';
+position: absolute;
+bottom: 7px;
+width: 0;
+height: 0;
+border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+left: -15px;
+border-width: 8px 16px 8px 0;
+border-color: transparent #F45B69 transparent transparent;
+}
+
+.timeline ul li:nth-child(even) div {
+left: -439px;
+}
+
+.timeline ul li:nth-child(even) div::before {
+right: -15px;
+border-width: 8px 0 8px 16px;
+border-color: transparent transparent transparent #F45B69;
+}
+
+time {
+display: block;
+font-size: 1.2rem;
+font-weight: bold;
+margin-bottom: 8px;
+}
+
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul li::after {
+transition: background .5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+background: #F45B69;
+}
+
+.timeline ul li div {
+visibility: hidden;
+opacity: 0;
+transition: all .5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(even) div {
+transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view div {
+transform: none;
+visibility: visible;
+opacity: 1;
+}
+
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+.timeline ul li div {
+width: 250px;
+}
+.timeline ul li:nth-child(even) div {
+left: -289px;
+/*250+45-6*/
+}
+}
+
+@media screen and (max-width: 600px) {
+.timeline ul li {
+margin-left: 20px;
+}
+.timeline ul li div {
+width: calc(100vw - 91px);
+}
+.timeline ul li:nth-child(even) div {
+left: 45px;
+}
+.timeline ul li:nth-child(even) div::before {
+left: -15px;
+border-width: 8px 16px 8px 0;
+border-color: transparent #F45B69 transparent transparent;
+}
+}
+              /*end of style for timeline*/
+      </style>
+  </head>
+  <body>
+
+    <!-- YOUR CONTENT GOES HERE -->
+
+<!--begning of navbar -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+      <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="#">Jairo Kunga</a>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse pull-left" id="nav-content">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Quem Foi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">TimeLine</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Factos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Hope</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Gallery</a>
+          </li>
+        </ul>
+      </div>
+    </nav><!--end of navbar-->
+
+      <!--start caroousel-->
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="https://placehold.it/1200x700" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+             <h3>...</h3>
+             <p>...</p>
+           </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://placehold.it/1200x700" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>...</h3>
+                <p>...</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://placehold.it/1200x700" alt="Third slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>...</h3>
+                <p>...</p>
+          </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+
+      <!--end carousel-->
+      <!--timeline section-->
+      <section class="intro">
+<div class="container">
+<h1>Vertical Timeline &darr;</h1>
+</div>
+</section>
+
+<section class="timeline">
+<ul>
+<li>
+<div>
+  <time>1934</time> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+</div>
+</li>
+<li>
+<div>
+  <time>1937</time> Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Suspendisse finibus mauris et bibendum molestie. Aenean ex augue, varius et pulvinar in, pretium non nisi.
+</div>
+</li>
+<li>
+<div>
+  <time>1940</time> Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.
+</div>
+</li>
+<li>
+<div>
+  <time>1943</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+</div>
+</li>
+<li>
+<div>
+  <time>1946</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+</div>
+</li>
+<li>
+<div>
+  <time>1956</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+</div>
+</li>
+<li>
+<div>
+  <time>1957</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+</div>
+</li>
+<li>
+<div>
+  <time>1967</time> Aenean condimentum odio a bibendum rhoncus. Ut mauris felis, volutpat eget porta faucibus, euismod quis ante.
+</div>
+</li>
+<li>
+<div>
+  <time>1977</time> Vestibulum porttitor lorem sed pharetra dignissim. Nulla maximus, dui a tristique iaculis, quam dolor convallis enim, non dignissim ligula ipsum a turpis.
+</div>
+</li>
+<li>
+<div>
+  <time>1985</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+</div>
+</li>
+<li>
+<div>
+  <time>2000</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+</div>
+</li>
+<li>
+<div>
+  <time>2005</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+</div>
+</li>
+</ul>
+</section>
+
+      <!--end of timeline section-->
+
+
+
+
+    <div class="container">
+
+    </div>
+
+    <!-- JavaScript: placed at the end of the document so the pages load faster -->
+		<!-- jQuery library -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+		<!-- Popper -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+		<!-- Latest compiled and minified Bootstrap JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    (function() {
+
+'use strict';
+
+// define variables
+var items = document.querySelectorAll(".timeline li");
+
+// check if an element is in viewport
+// http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+function isElementInViewport(el) {
+var rect = el.getBoundingClientRect();
+return (
+  rect.top >= 0 &&
+  rect.left >= 0 &&
+  rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+  rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+);
+}
+
+function callbackFunc() {
+for (var i = 0; i < items.length; i++) {
+  if (isElementInViewport(items[i])) {
+    items[i].classList.add("in-view");
+  }
+}
+}
+
+// listen for events
+window.addEventListener("load", callbackFunc);
+window.addEventListener("resize", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
+
+})();
+    </script>
+  </body>
+</html>
